@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ThinkBay.View.Signin_Out.SignInPage"
+             xmlns:local="clr-namespace:ThinkBay"
+             Title="SignInPage">
+    <Grid RowDefinitions="4*,2*" Background="Black">
+        <Label Grid.Row="0" BackgroundColor="Red" VerticalOptions="Center" FontSize="100" Text="{Binding Message,Source={Static local:App.T_Message}}" FontFamily="FontAwesome" TextColor="Red"/>
+        <Label Grid.Row="0" VerticalOptions="Center" Text="{Binding LoginHeader,Source={Static local:App.T_Message}}" FontFamily="OpenSansSemibold" Background="Red" TextColor="White"/>
+
+    </Grid>-
+</ContentPage>

@@ -10,6 +10,7 @@ namespace ThinkBay.Helpers
     {
         //for the case of icon  wee ned to add  \u befor the unicode
         public string Message { get; set; } = "\uf007";
+        public string LoginHeader { get; set; } = "Let's Sign you in ";
         // FontAwesome Unicode for star icon
     }
 }

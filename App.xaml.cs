@@ -1,4 +1,5 @@
 ﻿using ThinkBay.Helpers;
+using ThinkBay.View.Signin_Out;
 
 namespace ThinkBay
 {
@@ -11,7 +12,8 @@ namespace ThinkBay
             T_Message = _message;
 
             //MainPage = new AppShell();
-            MainPage = new MainPage();
+
+            MainPage = new SignInPage();
         }
     }
 }
