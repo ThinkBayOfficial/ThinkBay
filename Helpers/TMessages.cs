@@ -8,6 +8,8 @@ namespace ThinkBay.Helpers
 {
     public  class TMessages
     {
-        public string Message { get; set; } = "App,dgsugfugdusbfusbfusufgudgsufgudgfugdsw";
+        //for the case of icon  wee ned to add  \u befor the unicode
+        public string Message { get; set; } = "\uf007";
+        // FontAwesome Unicode for star icon
     }
 }
