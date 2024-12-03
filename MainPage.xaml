@@ -7,7 +7,7 @@
     <ScrollView>
         <Label VerticalOptions="Center" Text="{Binding Message,Source={Static local:App.T_Message}}" FontFamily="FontAwesome" TextColor="Red"/>
           <!--<Label Text="&#xf005;" FontFamily="FontAwesome" FontSize="24"/>-->
-    
+       
     </ScrollView>
 
 </ContentPage>
