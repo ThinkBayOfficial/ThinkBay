@@ -8,5 +8,5 @@
         <Label Grid.Row="0" BackgroundColor="Red" VerticalOptions="Center" FontSize="100" Text="{Binding Message,Source={Static local:App.T_Message}}" FontFamily="FontAwesome" TextColor="Red"/>
         <Label Grid.Row="0" VerticalOptions="Center" Text="{Binding LoginHeader,Source={Static local:App.T_Message}}" FontFamily="OpenSansSemibold" Background="Red" TextColor="White"/>
 
-    </Grid>-
+    </Grid>
 </ContentPage>
