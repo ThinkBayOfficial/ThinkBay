@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using ThinkBay.Helpers;
 using ThinkBay.View.Signin_Out;
+using UraniumUI;
 
 namespace ThinkBay
 {
@@ -13,6 +14,8 @@ namespace ThinkBay
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseUraniumUI()
+                .UseUraniumUIMaterial()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -22,6 +25,7 @@ namespace ThinkBay
                 });
             //dependency injection for class
             builder.Services.AddSingleton<TMessages>();
+            builder.Services.AddSingleton<TICons>();
 
             //dependency injection for page
             builder.Services.AddSingleton<SignInPage>();
