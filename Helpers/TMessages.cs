@@ -9,8 +9,7 @@ using static System.Net.Mime.MediaTypeNames;
 namespace ThinkBay.Helpers
 {
     public  class TMessages
-    {      
-         
+    {  
         public string LoginHeader { get; set; } = "Let’s sign you in ";
         public string LoginSub { get; set; } = "Welcome Back! We\r\nmissed you.";
         public string ForGotPass { get; set; } = "Forgot Password?";
