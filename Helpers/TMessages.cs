@@ -18,7 +18,6 @@ namespace ThinkBay.Helpers
         public string Create_One { get; set; } = "Create One\r\n";
         public string Conditions { get; set; } = "Agree on our Terms & Conditions";
         public string AlreadyHave { get; set; } = " Already have an account?";
-
         public string Login { get; set; } = "Login";
         public string OTPDescription { get; set; } = "Please enter the 4-digit code sent \r\nto";
         public string Skip { get; set; } = " Skip";
