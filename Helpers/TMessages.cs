@@ -20,7 +20,11 @@ namespace ThinkBay.Helpers
         public string AlreadyHave { get; set; } = " Already have an account?";
         public string Login { get; set; } = "Login";
         public string OTPDescription { get; set; } = "Please enter the 4-digit code sent \r\nto";
+        public string ProfileHeader { get; set; } = " Tell Us About You!";
+        public string ProfileDesc { get; set; } = " Just a few details, and you’re all \r\nset to shop smarter";
+        public string PhotDesc { get; set; } = " Add a photo so we can say hi!";
+        public string Save { get; set; } = " Save";
         public string Skip { get; set; } = " Skip";
-
+        public string[] Gender { get; set; } = { "Male", "Female", "Others" };  
     }
 }

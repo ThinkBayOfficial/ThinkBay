@@ -9,5 +9,6 @@ namespace ThinkBay.Helpers
     public  class TICons
     {
         public string Shopping  { get; set; } = "\uf07a";
+        public string Profile  { get; set; } = "\uf007";
     }
 }

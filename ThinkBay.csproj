@@ -73,10 +73,12 @@
 	  <Folder Include="Model\Signin-Out\" />
 	  <Folder Include="ViewModel\Features\" />
 	  <Folder Include="ViewModel\Signin-Out\" />
-	  <Folder Include="View\Features\" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="View\Features\ProfilePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\Signin-Out\SignInPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

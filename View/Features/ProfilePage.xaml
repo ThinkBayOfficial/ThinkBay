@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ThinkBay.View.Features.ProfilePage"
+             xmlns:local="clr-namespace:ThinkBay" BackgroundColor="Black"
+             xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+             Title="ProfilePage">
+    <Grid Margin="0,0,0,0" RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto" Background="Black">
+        <Label   Margin="20,0,20,10" Grid.Row="0" TextColor="Yellow" VerticalOptions="Center" HorizontalOptions="End" FontAttributes="Bold" FontSize="15" Text="{Binding Skip, Source={Static local:App.T_Message}}" />
+        <Border  Margin="335,33,20,20"  Grid.Row="0" VerticalOptions="End"  HeightRequest="1" Stroke="Yellow" />
+        <Label   Margin="20,0,20,10" Grid.Row="1" TextColor="White" FontAttributes="Bold" FontSize="37" Text="{Binding ProfileHeader, Source={Static local:App.T_Message}}" />
+        <Label   Margin="25,0,20,10" Grid.Row="2" TextColor="White" FontAttributes="Bold" FontSize="22" Text="{Binding ProfileDesc, Source={Static local:App.T_Message}}" />
+        <Frame Grid.Row="3"  Margin="20,15,10,10" BackgroundColor="#2c2c2c" BorderColor="#2c2c2c" HeightRequest="110">
+            <Grid RowDefinitions="auto,auto">
+                <Label   Margin="20,0,20,10" Grid.Row="0"  VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" FontSize="32" Text="{Binding Profile, Source={Static local:App.TICon}}" FontFamily="FontAwesome"/>
+                <Label  Grid.Row="1" Margin="20,0,20,10"  HorizontalOptions="Center"  TextColor="White" FontSize="15" Text="{Binding PhotDesc, Source={Static local:App.T_Message}}" />
+            </Grid>
+        </Frame>
+
+        <uranium:TextField Grid.Row="4" Margin="20,20,20,10" BorderColor="DimGrey" BackgroundColor="Black" Title="Full Name" TitleColor="White" />
+        <uranium:TextField Grid.Row="5"  Margin="20,5,20,10" BorderColor="DimGrey" BackgroundColor="Black" Title="Phone" Keyboard="Numeric" TitleColor="White" />
+        <uranium:DropdownField  ItemsSource="{Binding  Gender, Source={Static local:App.T_Message}}"  Title="Gender" Grid.Row="6" Margin="20,5,20,5" BorderColor="DimGrey" BackgroundColor="Black" TitleColor="White"/>
+        <uranium:DatePickerField Grid.Row="7" Margin="20,5,20,5" BorderColor="DimGrey" BackgroundColor="Black" Title="Date of Birth" TitleColor="White" />
+        <uranium:TextField Grid.Row="8"  Margin="20,5,20,5" BorderColor="DimGrey" BackgroundColor="Black"  Title="Address" TitleColor="White" />
+       
+        <Button Grid.Row="10" Text="Save" Margin="20,10,20,10 " TextColor="Black" FontAttributes="Bold" BackgroundColor="Yellow"/>
+       
+    </Grid>
+</ContentPage>
