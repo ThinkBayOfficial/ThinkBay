@@ -25,6 +25,11 @@ namespace ThinkBay.Helpers
         public string PhotDesc { get; set; } = " Add a photo so we can say hi!";
         public string Save { get; set; } = " Save";
         public string Skip { get; set; } = " Skip";
-        public string[] Gender { get; set; } = { "Male", "Female", "Others" };  
+        public string[] Gender { get; set; } = { "Male", "Female", "Others" };
+        public string Forgot_Header { get; set; } = "Forgot Your Password ?";
+        public string Forgot_Desc { get; set; }  = " No worries! Enter your email or mobile number and \r\nwe’ll help you reset it.";
+        public string Forgot_P_Verification { get; set; } = "Enter Your New Password";
+        public string OTP_Desc { get; set; } = "Please enter the 4-digit code sent \r\nto";
+
     }
 }

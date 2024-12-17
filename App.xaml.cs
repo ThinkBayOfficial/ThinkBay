@@ -18,7 +18,10 @@ namespace ThinkBay
 
             // MainPage = new SignInPage();
             //MainPage = new SignUpPage();
-            MainPage = new ProfilePage();
+            //MainPage = new ProfilePage();
+            // MainPage = new  ForgotPassword();
+            //MainPage = new PasswordVerification();
+            MainPage = new ForgotPasswordOTP();
 
         }
     }

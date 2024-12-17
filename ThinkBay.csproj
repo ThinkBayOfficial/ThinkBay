@@ -81,7 +81,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiSplashScreen Include="Resources\Splash\splash.png" Color="#121212"/>
+	  <MauiSplashScreen Include="Resources\Splash\splash.png" Color="#121212" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -94,6 +94,15 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="View\Features\ProfilePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Signin-Out\ForgotPassword.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Signin-Out\ForgotPasswordOTP.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Signin-Out\PasswordVerification.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\Signin-Out\SignInPage.xaml">
