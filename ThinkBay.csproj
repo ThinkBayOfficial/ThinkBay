@@ -56,17 +56,11 @@
 
 	<ItemGroup>
 	  <AndroidResource Remove="Model\**" />
-	  <AndroidResource Remove="ViewModel\**" />
 	  <Compile Remove="Model\**" />
-	  <Compile Remove="ViewModel\**" />
 	  <EmbeddedResource Remove="Model\**" />
-	  <EmbeddedResource Remove="ViewModel\**" />
 	  <MauiCss Remove="Model\**" />
-	  <MauiCss Remove="ViewModel\**" />
 	  <MauiXaml Remove="Model\**" />
-	  <MauiXaml Remove="ViewModel\**" />
 	  <None Remove="Model\**" />
-	  <None Remove="ViewModel\**" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -85,6 +79,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />

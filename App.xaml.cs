@@ -1,6 +1,7 @@
 ﻿using ThinkBay.Helpers;
 using ThinkBay.View.Signin_Out;
 using ThinkBay.View.Features;
+using ThinkBay.ViewModel;
 
 namespace ThinkBay
 {
@@ -9,19 +10,19 @@ namespace ThinkBay
         public static TMessages T_Message { get; private set; }
         
         public static TICons TICon { get; private set; }
-        public App(TMessages _message ,TICons _icons)
+        public App(TMessages _message ,TICons _icons,SignInViewModel signInViewModel)
         {
             InitializeComponent();
             T_Message = _message;
             TICon= _icons;
             //MainPage = new AppShell();
 
-            // MainPage = new SignInPage();
+             MainPage = new SignInPage(signInViewModel);
             //MainPage = new SignUpPage();
             //MainPage = new ProfilePage();
             // MainPage = new  ForgotPassword();
             //MainPage = new PasswordVerification();
-            MainPage = new ForgotPasswordOTP();
+           // MainPage = new ForgotPasswordOTP();
 
         }
     }

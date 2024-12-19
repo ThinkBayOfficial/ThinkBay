@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using ThinkBay.Helpers;
 using ThinkBay.View.Signin_Out;
+using ThinkBay.ViewModel;
 using UraniumUI;
 
 namespace ThinkBay
@@ -30,6 +31,7 @@ namespace ThinkBay
             //dependency injection for page
             builder.Services.AddSingleton<SignInPage>();
             builder.Services.AddSingleton<SignUpPage>();
+            builder.Services.AddSingleton<SignInViewModel>();
             //dependency injection for  model 
             //dependency injection for view model 
 

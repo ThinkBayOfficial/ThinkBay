@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ThinkBay.View.Signin_Out.SignInPage"
              xmlns:local="clr-namespace:ThinkBay" BackgroundColor="Black"
+             xmlns:vm="clr-namespace:ThinkBay.ViewModel"
              xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
              Title="SignInPage">
     <Grid Margin="0,100,0,0" RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto,auto" Background="Black">
@@ -19,7 +20,11 @@
         <Button Grid.Row="7" Text="Sign In" Margin="20,10,20,20 " TextColor="Black" FontAttributes="Bold" BackgroundColor="Yellow"/>
         <Grid Margin="20,0,20,20 " ColumnDefinitions="auto,*" Grid.Row="8"   >
             <Label   Margin="65,0,0,20" Grid.Column="0" TextColor="White" FontSize="14"  Text="{Binding Create, Source={Static local:App.T_Message}}" />
-            <Label   Margin="5,0,0,20" Grid.Column="1" TextColor="Yellow"  FontSize="14"  Text="{Binding Create_One, Source={Static local:App.T_Message}}" />
+            <Label   Margin="5,0,0,20" Grid.Column="1" TextColor="Yellow"  FontSize="14"  Text="{Binding Create_One, Source={Static local:App.T_Message}}" >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CreateOneCommand,Source={ vm:SignInViewModel}}"/>
+                </Label.GestureRecognizers>
+            </Label>
         </Grid>
     </Grid>
 </ContentPage>
