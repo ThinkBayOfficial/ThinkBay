@@ -26,5 +26,6 @@
                 </Label.GestureRecognizers>
             </Label>
         </Grid>
+        <ActivityIndicator Color="Red" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="30" WidthRequest="30" IsVisible="{Binding Q_hi,Source={vm:SignInViewModel}}"></ActivityIndicator>
     </Grid>
 </ContentPage>
