@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ThinkBay.Popupu.View.SignUpOTPPage"
              xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
-             xmlns:mopupsanim="clr-namespace:Mopups.Animations;assembly=Mopups"
+             xmlns:mopupsanim="clr-namespace:Mopups.Animations;assembly=Mopups" xmlns:local="clr-namespace:ThinkBay"
+                  xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"  
              Title="MyPopupPage" BackgroundColor="#80000000" CloseWhenBackgroundIsClicked="False">
     <mopups:PopupPage.Animation>
         <mopupsanim:ScaleAnimation
@@ -14,38 +15,37 @@
             ScaleIn="1"
             ScaleOut="0.7" />
     </mopups:PopupPage.Animation>
-    <ScrollView HorizontalOptions="Center" VerticalOptions="Center">
-        <Border WidthRequest="300" HeightRequest="300"
-                BackgroundColor="White"
-                HorizontalOptions="Center">
-            <Border.StrokeShape>
-                <RoundRectangle CornerRadius="40,0,0,40"/>
-            </Border.StrokeShape>
-            <VerticalStackLayout Spacing="3">
-                <Entry
-                    x:Name="UsernameEntry"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"
-                    Placeholder="Username" />
+    
+    <Grid VerticalOptions="EndAndExpand"  RowDefinitions="auto,auto,auto,auto,auto" Background="Black" >
+        <Border  Grid.Row="0" HeightRequest="3" BackgroundColor="#ffde22" Stroke="#ffde22"/>
+        <Label Grid.Row="2" x:Name="TimeLabel" HorizontalOptions="End" TextColor="#FFFFFF" Text="00:45" FontSize="12" />
+        <Label  HorizontalOptions="Center" HorizontalTextAlignment="Center"  Margin="20,50,20,10" Grid.Row="1"  >
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="{Binding OTP_Desc, Source={Static local:App.T_Message}}" TextColor="#FFFFFF"/>
+                    <Span  Text="demo@gmail.com" TextColor="#ffde22"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Grid Margin="0,20,0,0" HorizontalOptions="Center" Grid.Row="3" RowDefinitions="Auto,Auto"
+           ColumnDefinitions="Auto,Auto,Auto,Auto,Auto">
 
-                <Entry
-                    x:Name="PasswordEntry"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"
-                    IsPassword="True"
-                    Placeholder="Password" />
+            <!-- OTP Boxes -->
 
-                <Button
-                    x:Name="LoginButton"
-                    Margin="10,5"
-                    HorizontalOptions="Fill"
-                    VerticalOptions="EndAndExpand"
-                    Text="Login"
-                    Clicked="LoginButton_Clicked">
-                </Button>
-            </VerticalStackLayout>
-        </Border>
+            <uranium:TextField BorderColor="DimGrey"  TextColor="#FFFFFF" Margin="8" x:Name="otpBox1" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center"
+                MaxLength="1" Keyboard="Numeric" TextChanged="otpBox1_TextChanged_1"/>
+            <uranium:TextField BorderColor="DimGrey"  TextColor="#FFFFFF" Margin="8" x:Name="otpBox2" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center"
+                MaxLength="1" Keyboard="Numeric" TextChanged="otpBox1_TextChanged_1" Grid.Column="1"/>
+            <uranium:TextField BorderColor="DimGrey" TextColor="#FFFFFF" Margin="8"  x:Name="otpBox3" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center"
+                MaxLength="1" Keyboard="Numeric" TextChanged="otpBox1_TextChanged_1" Grid.Column="2"/>
+            <uranium:TextField BorderColor="DimGrey" TextColor="#FFFFFF" Margin="8"  x:Name="otpBox4" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center"
+                MaxLength="1" Keyboard="Numeric" TextChanged="otpBox1_TextChanged_1" Grid.Column="3"/>
+            <uranium:TextField BorderColor="DimGrey" TextColor="#FFFFFF" Margin="8"  x:Name="otpBox5" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center"
+                MaxLength="1" Keyboard="Numeric" TextChanged="otpBox1_TextChanged_1" Grid.Column="4"/>
 
-    </ScrollView>
+        </Grid>
+        <Button Grid.Row="4" Text=" Sign In" Margin="20,20,20,20 " FontSize="15" TextColor="Black" FontAttributes="Bold" BackgroundColor="#ffde22"/>
 
+    </Grid>
+     
 </mopups:PopupPage>

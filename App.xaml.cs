@@ -17,8 +17,8 @@ namespace ThinkBay
             TICon= _icons;
             //MainPage = new AppShell();
 
-             MainPage = new SignInPage();
-            //MainPage = new SignUpPage();
+             //MainPage = new SignInPage();
+              MainPage = new SignUpPage();
             //MainPage = new ProfilePage();
             // MainPage = new  ForgotPassword();
             //MainPage = new PasswordVerification();
