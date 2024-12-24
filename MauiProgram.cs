@@ -1,4 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
+using Mopups.Hosting;
+using Mopups.Interfaces;
+using Mopups.Services;
 using ThinkBay.Helpers;
 using ThinkBay.View.Signin_Out;
 using ThinkBay.ViewModel;
@@ -16,6 +19,7 @@ namespace ThinkBay
             builder
                 .UseMauiApp<App>()
                 .UseUraniumUI()
+                .ConfigureMopups()
                 .UseUraniumUIMaterial()
                 .ConfigureFonts(fonts =>
                 {
@@ -33,6 +37,7 @@ namespace ThinkBay
             builder.Services.AddSingleton<SignUpPage>();
             builder.Services.AddSingleton<SignInViewModel>();
             builder.Services.AddSingleton<SignUpViewModel>();
+            builder.Services.AddSingleton<IPopupNavigation>(MopupService.Instance);
             //dependency injection for  model 
             //dependency injection for view model 
 

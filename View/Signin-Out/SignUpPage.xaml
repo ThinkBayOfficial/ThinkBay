@@ -19,7 +19,7 @@
             <uranium:CheckBox BoxBackgroundColor="#ffde22" BoxSizeRequest="20" Grid.ColumnSpan="2" Grid.Row="0" TextFontSize="15" TextColor="White" Grid.Column="0" Text="{Binding Conditions ,Source={Static local:App.T_Message}}" />
             <!--<Label Grid.Row="0" Grid.Column="1" TextColor="Yellow" FontSize="15" VerticalOptions="Center" HorizontalOptions="End"   Text="{Binding ForGotPass, Source={Static local:App.T_Message}}" />-->
         </Grid>
-        <Button Grid.Row="9" Text="Sign Up" Margin="20,10,20,20 " TextColor="Black" FontAttributes="Bold" BackgroundColor="#ffde22"/>
+        <Button Grid.Row="9" Text="Sign Up" Margin="20,10,20,20 " TextColor="Black" FontAttributes="Bold" Clicked="Button_Clicked" BackgroundColor="#ffde22"/>
         <Grid Margin="20,0,20,20 " ColumnDefinitions="auto,*" Grid.Row="10"   >
             <Label   Margin="65,0,20,20" Grid.Column="0" TextColor="White" FontSize="14"  Text="{Binding AlreadyHave, Source={Static local:App.T_Message}}" />
             <Label   Margin="5,0,20,20" Grid.Column="1" TextColor="#ffde22"  FontSize="14"  Text="{Binding Login, Source={Static local:App.T_Message}}" >

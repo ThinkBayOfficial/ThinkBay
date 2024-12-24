@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Mopups.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -25,6 +26,7 @@ namespace ThinkBay.ViewModel
         {
            await App.Current.MainPage.Navigation.PushModalAsync(new ForgotPassword());
         }
+         
 
         [RelayCommand]
         private async void CreateOne()

@@ -83,11 +83,15 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+		<PackageReference Include="Mopups" Version="1.3.2" />
 		<PackageReference Include="UraniumUI" Version="2.10.2" />
 		<PackageReference Include="UraniumUI.Material" Version="2.10.2" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Popupu\View\SignUpOTPPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\Features\ProfilePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
