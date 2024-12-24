@@ -18,19 +18,18 @@ namespace ThinkBay.ViewModel
         {
 
         }
-
         [ObservableProperty]
-        bool q_hi;
+        private bool _iSRun;
+        [RelayCommand]
+        private async void ForgotPassword()
+        {
+           await App.Current.MainPage.Navigation.PushModalAsync(new ForgotPassword());
+        }
 
         [RelayCommand]
         private async void CreateOne()
         {
-
-            Q_hi = true;
-            // await App.Current.MainPage.Navigation.PushModalAsync(new SignUpPage());
-
-             App.Current.MainPage = new SignUpPage();
-            Q_hi = false;
+            App.Current.MainPage = new SignUpPage();
         }
     }
 }

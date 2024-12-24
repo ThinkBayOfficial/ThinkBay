@@ -32,6 +32,7 @@ namespace ThinkBay
             builder.Services.AddSingleton<SignInPage>();
             builder.Services.AddSingleton<SignUpPage>();
             builder.Services.AddSingleton<SignInViewModel>();
+            builder.Services.AddSingleton<SignUpViewModel>();
             //dependency injection for  model 
             //dependency injection for view model 
 

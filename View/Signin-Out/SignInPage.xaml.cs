@@ -5,10 +5,11 @@ namespace ThinkBay.View.Signin_Out;
 
 public partial class SignInPage : ContentPage
 {
-	public SignInPage(SignInViewModel signInViewModel)
+	public SignInPage()
 	{
 		InitializeComponent();
-		BindingContext= signInViewModel;
+		BindingContext= new SignInViewModel(); 
+		
 	}
 	
 }

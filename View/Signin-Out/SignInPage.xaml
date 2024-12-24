@@ -2,30 +2,38 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ThinkBay.View.Signin_Out.SignInPage"
-             xmlns:local="clr-namespace:ThinkBay" BackgroundColor="Black"
+             xmlns:local="clr-namespace:ThinkBay" BackgroundColor="#121212"
              xmlns:vm="clr-namespace:ThinkBay.ViewModel"
+             
              xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
              Title="SignInPage">
-    <Grid Margin="0,100,0,0" RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto,auto" Background="Black">
+    <Grid Margin="0,100,0,0" RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto,auto" Background="#121212">
         <Label   Margin="20,0,20,20" Grid.Row="0" TextColor="White" FontSize="40" Text="{Binding LoginHeader, Source={Static local:App.T_Message}}" />
         <Label   Margin="20,0,20,20" Grid.Row="1" TextColor="White" FontSize="20" Text="{Binding LoginSub, Source={Static local:App.T_Message}}" />
-        <Label   Margin="20,0,20,20" Grid.Row="2" Grid.RowSpan="2" TextColor="Yellow" FontSize="32" Text="{Binding Shopping, Source={Static local:App.TICon}}" FontFamily="FontAwesome"/>
+        <Label   Margin="20,0,20,20" Grid.Row="2" Grid.RowSpan="2" TextColor="#ffde22" FontSize="32" Text="{Binding Shopping, Source={Static local:App.TICon}}" FontFamily="FontAwesome"/>
         <Border  Margin="20,33,20,20"  Grid.Row="3" HeightRequest="1" Stroke="White" />
-        <uranium:TextField Grid.Row="4" Margin="20,20,20,20" BorderColor="DimGrey" BackgroundColor="Black" Title="Email" TitleColor="White" />
-        <uranium:TextField Grid.Row="5" IsPassword="True" Margin="20,10,20,20" BorderColor="DimGrey" BackgroundColor="Black" Title="Password" TitleColor="White" />
+        <uranium:TextField Grid.Row="4" Margin="20,20,20,20" TextColor="#e0e0e0" BorderColor="DimGrey" BackgroundColor="#121212" Title="Email" TitleColor="#e0e0e0" >
+            
+        </uranium:TextField>
+        <uranium:TextField Grid.Row="5"  TextColor="#e0e0e0" IsPassword="True"  Margin="20,10,20,20" BorderColor="DimGrey" BackgroundColor="#121212" Title="Password" TitleColor="#e0e0e0" />
         <Grid Margin="20,0,20,20 " ColumnDefinitions="*,*" Grid.Row="6">
-            <uranium:CheckBox BoxBackgroundColor="Yellow" BoxSizeRequest="20" Grid.Row="0" TextFontSize="15" TextColor="White" Grid.Column="0" Text="Remember me" />
-            <Label Grid.Row="0" Grid.Column="1" TextColor="Yellow" FontSize="15" VerticalOptions="Center" HorizontalOptions="End"   Text="{Binding ForGotPass, Source={Static local:App.T_Message}}" />
+            <uranium:CheckBox BoxBackgroundColor="#ffde22" BoxSizeRequest="20" Grid.Row="0" TextFontSize="15" TextColor="White" Grid.Column="0" Text="Remember me" />
+            <Label Grid.Row="0" Grid.Column="1" TextColor="#ffde22" FontSize="15" VerticalOptions="Center" HorizontalOptions="End"   Text="{Binding ForGotPass, Source={Static local:App.T_Message}}" >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ForgotPasswordCommand,Source={vm:SignInViewModel}}"/>
+                </Label.GestureRecognizers>
+            </Label>
         </Grid>
-        <Button Grid.Row="7" Text="Sign In" Margin="20,10,20,20 " TextColor="Black" FontAttributes="Bold" BackgroundColor="Yellow"/>
+        <Button Grid.Row="7" Text="Sign In" Margin="20,10,20,20 " TextColor="Black" FontAttributes="Bold" BackgroundColor="#ffde22"/>
         <Grid Margin="20,0,20,20 " ColumnDefinitions="auto,*" Grid.Row="8"   >
             <Label   Margin="65,0,0,20" Grid.Column="0" TextColor="White" FontSize="14"  Text="{Binding Create, Source={Static local:App.T_Message}}" />
-            <Label   Margin="5,0,0,20" Grid.Column="1" TextColor="Yellow"  FontSize="14"  Text="{Binding Create_One, Source={Static local:App.T_Message}}" >
+            <Label   Margin="5,0,0,20" Grid.Column="1" TextColor="#ffde22"  FontSize="14"  Text="{Binding Create_One, Source={Static local:App.T_Message}}" >
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding CreateOneCommand,Source={ vm:SignInViewModel}}"/>
                 </Label.GestureRecognizers>
             </Label>
+           
         </Grid>
-        <ActivityIndicator Color="Red" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="30" WidthRequest="30" IsVisible="{Binding Q_hi,Source={vm:SignInViewModel}}"></ActivityIndicator>
+        <ActivityIndicator IsRunning="{Binding ISRun,Source={vm:SignInViewModel}}" HorizontalOptions="Center" VerticalOptions="Center"  />
     </Grid>
 </ContentPage>
