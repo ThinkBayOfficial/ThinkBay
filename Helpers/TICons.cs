@@ -10,5 +10,7 @@ namespace ThinkBay.Helpers
     {
         public string Shopping  { get; set; } = "\uf07a";
         public string Profile  { get; set; } = "\uf007";
+        public string EyeOppen { get; set; } = "\uf06e";
+        public string EyeClosed { get; set; } = "\uf070";
     }
 }

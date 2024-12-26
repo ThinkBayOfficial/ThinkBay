@@ -17,10 +17,15 @@ namespace ThinkBay.ViewModel
         
         public SignInViewModel()
         {
-
+            EyeClosed = true;
+            EyeOppened = false;
         }
         [ObservableProperty]
-        private bool _iSRun;
+        private bool ispassword=true;
+        [ObservableProperty]
+        private bool eyeOppened;
+        [ObservableProperty]
+        private bool eyeClosed;
         [RelayCommand]
         private async void ForgotPassword()
         {
@@ -32,6 +37,22 @@ namespace ThinkBay.ViewModel
         private async void CreateOne()
         {
             App.Current.MainPage = new SignUpPage();
+        }
+        [RelayCommand]
+        private async void ShowPasswordFunc()
+        {
+            Ispassword = !Ispassword;
+            if(Ispassword)
+            {
+                EyeClosed = true;
+                EyeOppened = false;
+            }
+            else
+            {
+                EyeClosed = false;
+                EyeOppened = true;
+            }
+             
         }
     }
 }
