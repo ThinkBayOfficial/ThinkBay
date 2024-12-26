@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ThinkBay.View.Signin_Out.SignInPage"
+             xmlns:behave="clr-namespace:ThinkBay.Behaviours"
              xmlns:local="clr-namespace:ThinkBay" BackgroundColor="#121212"
              xmlns:vm="clr-namespace:ThinkBay.ViewModel"
              
@@ -13,7 +14,10 @@
         <Label   Margin="20,0,20,20" Grid.Row="2" Grid.RowSpan="2" TextColor="#ffde22" FontSize="32" Text="{Binding Shopping, Source={Static local:App.TICon}}" FontFamily="FontAwesome"/>
         <Border  Margin="20,33,20,20"  Grid.Row="3" HeightRequest="1" Stroke="White" />
         <uranium:TextField Grid.Row="4" Margin="20,20,20,20" TextColor="#e0e0e0" BorderColor="DimGrey" BackgroundColor="#121212" Title="Email" TitleColor="#e0e0e0" >
-            
+            <uranium:TextField.Behaviors>
+                <behave:EmailValidationBehavior/>
+            </uranium:TextField.Behaviors>
+                
         </uranium:TextField>
         <uranium:TextField Grid.Row="5"  TextColor="#e0e0e0" IsPassword="True"  Margin="20,10,20,20" BorderColor="DimGrey" BackgroundColor="#121212" Title="Password" TitleColor="#e0e0e0" />
         <Grid Margin="20,0,20,20 " ColumnDefinitions="*,*" Grid.Row="6">
