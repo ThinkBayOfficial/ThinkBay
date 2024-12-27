@@ -20,12 +20,19 @@ namespace ThinkBay.ViewModel
             EyeClosed = true;
             EyeOppened = false;
         }
+
+        #region Properties
+
         [ObservableProperty]
         private bool ispassword=true;
         [ObservableProperty]
         private bool eyeOppened;
         [ObservableProperty]
         private bool eyeClosed;
+
+        #endregion
+
+        #region Commands
         [RelayCommand]
         private async void ForgotPassword()
         {
@@ -38,6 +45,8 @@ namespace ThinkBay.ViewModel
         {
             App.Current.MainPage = new SignUpPage();
         }
+
+
         [RelayCommand]
         private async void ShowPasswordFunc()
         {
@@ -54,5 +63,7 @@ namespace ThinkBay.ViewModel
             }
              
         }
+        #endregion
+
     }
 }
