@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ThinkBay.Helpers;
 using ThinkBay.View.Signin_Out;
 
 namespace ThinkBay.ViewModel
@@ -18,6 +19,7 @@ namespace ThinkBay.ViewModel
         [RelayCommand]
         private async void LoginClicked()
         {
+            var b= T_Preferences.LOGIN_DATA;
             App.Current.MainPage = new SignInPage();
         }
 

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ThinkBay.Helpers
 {
-    public class T_Preferences
+    public static class T_Preferences
     {
-        private static readonly string KEY_LOGIN_DATA;
+        private static readonly string KEY_LOGIN_DATA= "login_data_key";
 
         public static string LOGIN_DATA
         {
