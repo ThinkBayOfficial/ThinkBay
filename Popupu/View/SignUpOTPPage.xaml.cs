@@ -5,20 +5,26 @@ namespace ThinkBay.Popupu.View;
 public partial class SignUpOTPPage 
 {
     private int _secondsRemaining = 45;
+     public bool isblack;
     public SignUpOTPPage()
 	{
 		InitializeComponent();
         StartCountdownTimer();
+       
     }
     private void LoginButton_Clicked(object sender, EventArgs e)
     {
         MopupService.Instance.PopAsync();
     }
+
+    [Obsolete]
     private  void StartCountdownTimer()
     {
-        // Start a timer that ticks every second (1000 ms)
+       
+        
         Device.StartTimer(TimeSpan.FromSeconds(1), () =>
         {
+            
             // If there is still time left
             if (_secondsRemaining > 0)
             {
@@ -30,13 +36,33 @@ public partial class SignUpOTPPage
 
                 // Update the Label to show the remaining time
                 TimeLabel.Text = timeFormatted;
+               
+                if(_secondsRemaining<10)
+                {
+                    if (isblack == true)
+                    {
+                        TimeLabel.TextColor = Color.FromHex("#FFFFFF");
+                        isblack = false;
+                    }
+                    else
+                    {
+                        TimeLabel.TextColor = Color.FromHex("#FF0000");
+                        isblack = true;
+                    }
+
+                   
+                }
             }
             else
             {
 
                 // Once the timer reaches 0, display "Time's up!"
                 TimeLabel.Text = "Time's up!";
-                MopupService.Instance.PopAsync();
+                if(Mopups.Services.MopupService.Instance.PopupStack.Count>0)
+                {
+                    MopupService.Instance.PopAsync();
+                }
+                
                 return false; // Stop the timer
             }
 
@@ -52,7 +78,7 @@ public partial class SignUpOTPPage
         {
             // Find the next Entry box
             int currentColumn = Grid.GetColumn(currentEntry);
-            if (currentColumn < 4) // There are 5 OTP boxes
+            if (currentColumn < 3) // There are 4 OTP boxes
             {
                 var nextEntry = (UraniumUI.Material.Controls.TextField)this.FindByName($"otpBox{currentColumn + 2}");
                 nextEntry?.Focus();
