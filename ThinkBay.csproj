@@ -95,13 +95,13 @@
 	  <MauiXaml Update="View\Features\ProfilePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\Signin-Out\ForgotPassword.xaml">
+	  <MauiXaml Update="View\Signin-Out\View\ForgotPassword.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\Signin-Out\ForgotPasswordOTP.xaml">
+	  <MauiXaml Update="View\Signin-Out\View\ForgotPasswordOTP.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\Signin-Out\PasswordVerification.xaml">
+	  <MauiXaml Update="View\Signin-Out\View\PasswordVerification.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\Signin-Out\View\SigninView.xaml">

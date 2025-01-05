@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ThinkBay.Popupu.View;
+using ThinkBay.View.Signin_Out.View;
 
 namespace ThinkBay.View.Signin_Out.ViewModel
 {
@@ -24,16 +26,18 @@ namespace ThinkBay.View.Signin_Out.ViewModel
         private string enterConfirmPassword;
 
         [RelayCommand]
-        private void SignupClicked()
+        private async void SignupClicked()
         {
             var username= FullName;
             var email = EnterEmail;
             var password = EnterPassword;
             var confirmPassword = EnterConfirmPassword;
+            await Mopups.Services.MopupService.Instance.PushAsync(new SignUpOTPPage());
         }
         [RelayCommand]
         private void LoginClicked()
         {
+            App.Current.MainPage = new SigninView();
         }
 
     }

@@ -33,7 +33,7 @@ namespace ThinkBay
 
             //dependency injection for page
             
-            builder.Services.AddSingleton<SignUpPage>();
+            
             
             builder.Services.AddSingleton<IPopupNavigation>(MopupService.Instance);
             //dependency injection for  model 
