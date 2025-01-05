@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ThinkBay.View.Signin_Out.ViewModel
 {
-    public partial class SignUpViewModel :ObservableObject
+    public partial class SignUpViewModel : ObservableObject
     {
         public SignUpViewModel()
         {
@@ -17,34 +17,24 @@ namespace ThinkBay.View.Signin_Out.ViewModel
         [ObservableProperty]
         private string fullName;
         [ObservableProperty]
-        private string emailEntry;
+        private string enterEmail;
         [ObservableProperty]
-        private string passwordEntry;
+        private string enterPassword;
         [ObservableProperty]
-        private string confirmPasswordEntry;
+        private string enterConfirmPassword;
+
         [RelayCommand]
-        public void SignupClicked()
+        private void SignupClicked()
         {
-            var passwo = PasswordEntry;
-            var confirmpass = ConfirmPasswordEntry;
-            var email = EmailEntry;
-            var name = FullName;
+            var username= FullName;
+            var email = EnterEmail;
+            var password = EnterPassword;
+            var confirmPassword = EnterConfirmPassword;
         }
         [RelayCommand]
-        public void LoginClicked()
+        private void LoginClicked()
         {
-            var passwo = PasswordEntry;
-            var confirmpass = ConfirmPasswordEntry;
-            var email = EmailEntry;
-            var name = FullName;
         }
-        //[RelayCommand]
-        //public void TermsClicked()
-        //{
-        //    var passwo = PasswordEntry;
-        //    var confirmpass = ConfirmPasswordEntry;
-        //    var email = EmailEntry;
-        //    var name = FullName;
-        //}
+
     }
 }

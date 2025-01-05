@@ -4,7 +4,6 @@ using Mopups.Interfaces;
 using Mopups.Services;
 using ThinkBay.Helpers;
 using ThinkBay.View.Signin_Out;
-using ThinkBay.ViewModel;
 using UraniumUI;
 
 namespace ThinkBay
@@ -33,10 +32,9 @@ namespace ThinkBay
             builder.Services.AddSingleton<TICons>();
 
             //dependency injection for page
-            builder.Services.AddSingleton<SignInPage>();
+            
             builder.Services.AddSingleton<SignUpPage>();
-            builder.Services.AddSingleton<SignInViewModel>();
-            builder.Services.AddSingleton<SignUpViewModel>();
+            
             builder.Services.AddSingleton<IPopupNavigation>(MopupService.Instance);
             //dependency injection for  model 
             //dependency injection for view model 

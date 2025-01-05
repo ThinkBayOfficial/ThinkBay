@@ -4,7 +4,7 @@
              x:Class="ThinkBay.View.Signin_Out.SignUpPage"
              xmlns:behave="clr-namespace:ThinkBay.Behaviours"
              xmlns:local="clr-namespace:ThinkBay" BackgroundColor="#121212"
-             xmlns:vm="clr-namespace:ThinkBay.ViewModel"
+              
              xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
              Title="SignUpPage">
     <Grid Margin="0,30,0,0"  RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto" Background="#121212">
@@ -34,7 +34,7 @@
             <Label   Margin="65,0,20,20" Grid.Column="0" TextColor="White" FontSize="14"  Text="{Binding AlreadyHave, Source={Static local:App.T_Message}}" />
             <Label   Margin="5,0,20,20" Grid.Column="1" TextColor="#ffde22"  FontSize="14"  Text="{Binding Login, Source={Static local:App.T_Message}}" >
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding LoginClickedCommand,Source={vm:SignUpViewModel}}"/>
+                    <TapGestureRecognizer Command="{Binding LoginClickedCommand}"/>
                 </Label.GestureRecognizers>
             </Label>
         </Grid>

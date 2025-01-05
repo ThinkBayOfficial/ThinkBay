@@ -3,7 +3,7 @@ using Mopups.Services;
 using System.ComponentModel.DataAnnotations;
 using ThinkBay.Behaviours;
 using ThinkBay.Popupu.View;
-using ThinkBay.ViewModel;
+ 
 
 namespace ThinkBay.View.Signin_Out;
 
@@ -14,7 +14,7 @@ public partial class SignUpPage : ContentPage
 	{
 		InitializeComponent();
         
-        BindingContext = new SignUpViewModel();
+        //BindingContext = new SignUpViewModel();
       
     }
 
