@@ -1,3 +1,5 @@
+using ThinkBay.View.Signin_Out.ViewModel;
+
 namespace ThinkBay.View.Signin_Out;
 
 public partial class PasswordVerification : ContentPage
@@ -5,7 +7,8 @@ public partial class PasswordVerification : ContentPage
 	public PasswordVerification()
 	{
 		InitializeComponent();
-	}
+        BindingContext = new PasswordVerificationViewModel();
+    }
 
     private void TextField_TextChanged(object sender, TextChangedEventArgs e)
     {

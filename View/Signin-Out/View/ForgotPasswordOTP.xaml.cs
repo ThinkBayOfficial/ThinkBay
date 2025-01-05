@@ -1,3 +1,5 @@
+using ThinkBay.View.Signin_Out.ViewModel;
+
 namespace ThinkBay.View.Signin_Out;
 
 public partial class ForgotPasswordOTP : ContentPage
@@ -5,7 +7,8 @@ public partial class ForgotPasswordOTP : ContentPage
 	public ForgotPasswordOTP()
 	{
 		InitializeComponent();
-	}
+        BindingContext = new ForgotPasswordOTPViewModel();
+    }
     private void OtpBox_TextChanged(object sender, TextChangedEventArgs e)
     {
         
