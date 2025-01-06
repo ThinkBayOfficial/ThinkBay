@@ -2,6 +2,7 @@
 using ThinkBay.View.Signin_Out;
 using ThinkBay.View.Features;
 using ThinkBay.View.Signin_Out.View;
+using ThinkBay.Popupu.View;
 
 namespace ThinkBay
 {
@@ -17,7 +18,7 @@ namespace ThinkBay
             TICon= _icons;
             //MainPage = new AppShell();
 
-               MainPage = new SignUpView();
+               MainPage = new SplashVideoPage();
              // MainPage = new SignUpPage();
              //MainPage = new ProfilePage();
              // MainPage = new  ForgotPassword();

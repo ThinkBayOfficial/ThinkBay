@@ -35,7 +35,7 @@ public partial class ForgotPasswordOTP : ContentPage
         {
             // Find the next Entry box
             int currentColumn = Grid.GetColumn(currentEntry);
-            if (currentColumn < 4) // There are 5 OTP boxes
+            if (currentColumn < 3) // There are 4 OTP boxes
             {
                 var nextEntry = (UraniumUI.Material.Controls.TextField)this.FindByName($"otpBox{currentColumn + 2}");
                 nextEntry?.Focus();

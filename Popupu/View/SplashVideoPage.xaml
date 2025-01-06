@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ThinkBay.Popupu.View.SplashVideoPage"
+             xmlns:tool="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="SplashVideoPage">
+    <Grid>
+        <!-- Video Player -->
+        <tool:MediaElement  Source="embed://TestOne.mp4" x:Name="VideoPlayer"
+                           ShouldShowPlaybackControls="False" 
+                           
+                      HorizontalOptions="FillAndExpand"
+                      VerticalOptions="FillAndExpand" />
+
+       
+    </Grid>
+</ContentPage>
