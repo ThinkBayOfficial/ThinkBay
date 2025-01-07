@@ -3,10 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ThinkBay.Popupu.View.SplashVideoPage"
              xmlns:tool="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             BackgroundColor="Red"
              Title="SplashVideoPage">
     <Grid>
         <!-- Video Player -->
-        <tool:MediaElement  Source="embed://TestOne.mp4" x:Name="VideoPlayer"
+        <tool:MediaElement  Source="embed://SplashScreenV.mp4" x:Name="VideoPlayer"
                            ShouldShowPlaybackControls="False" 
                            
                       HorizontalOptions="FillAndExpand"
