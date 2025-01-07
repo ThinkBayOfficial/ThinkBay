@@ -35,7 +35,7 @@ namespace ThinkBay.Behaviours
                 IsValid = IsValidEmail(entry.Text);
 
                 entry.TextColor = IsValid ? Color.FromHex("#00FF00") : Color.FromHex("#FF0000");
-
+               //entry.TitleColor = IsValid? Color.FromHex("#00FF00") : Color.FromHex("#FF0000");
 
             }
         }
