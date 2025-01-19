@@ -16,9 +16,7 @@ namespace ThinkBay.View.Signin_Out.ViewModel
     {
         public SignUpViewModel()
         {
-            //Ispassword
-           // Ispasswordshowiconclossed
-          // Ispasswordshowiconoppen
+            
         }
         [ObservableProperty]
         private string fullName;

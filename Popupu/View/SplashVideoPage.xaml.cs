@@ -8,7 +8,7 @@ namespace ThinkBay.Popupu.View;
 
 public partial class SplashVideoPage : ContentPage
 {
-    private int _secondsRemaining = 10;
+    private int _secondsRemaining = 7;
     public SplashVideoPage()
     {
         InitializeComponent();
@@ -28,7 +28,7 @@ public partial class SplashVideoPage : ContentPage
 
                 // Format the remaining time as mm:ss (minutes:seconds)
                 var timeFormatted = TimeSpan.FromSeconds(_secondsRemaining).ToString(@"mm\:ss");
-                if(_secondsRemaining==1)
+                if(_secondsRemaining==4)
                 {
                     App.Current.MainPage = new SigninView();
                 }
