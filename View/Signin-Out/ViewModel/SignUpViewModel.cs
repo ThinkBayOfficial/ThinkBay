@@ -43,7 +43,9 @@ namespace ThinkBay.View.Signin_Out.ViewModel
         [RelayCommand]
         private async void SignupClicked()
         {
-          
+            var emailRegex = new Regex(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{1,}$");
+            string pattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$";
+            var passwordregex = new Regex(pattern);
             if (string.IsNullOrEmpty(FullName))
             {
                 await App.Current.MainPage.DisplayAlert("Alert", "Name Canot be Empty", "OK");
@@ -54,10 +56,20 @@ namespace ThinkBay.View.Signin_Out.ViewModel
                 await App.Current.MainPage.DisplayAlert("Alert", "Email Canot be Empty", "OK");
                 return;
             }
-
+            else if (!emailRegex.IsMatch(EnterEmail))
+            { 
+                await App.Current.MainPage.DisplayAlert("Alert", "Please enter valid Email", "OK");
+                return;
+                
+            }
             else if (string.IsNullOrEmpty(EnterPassword))
             {
                 await App.Current.MainPage.DisplayAlert("Alert", "Password Canot be Empty", "OK");
+                return;
+            }
+            else if(!passwordregex.IsMatch(EnterPassword))
+            {
+                await App.Current.MainPage.DisplayAlert("Alert", "Password must contain at least 8 characters, one uppercase, one lowercase, one number and one special character", "OK");
                 return;
             }
             else if (string.IsNullOrEmpty(EnterConfirmPassword))
@@ -65,48 +77,26 @@ namespace ThinkBay.View.Signin_Out.ViewModel
                 await App.Current.MainPage.DisplayAlert("Alert", "Confirm Password  Canot be Empty", "OK");
                 return;
             }
+            else if (EnterPassword != EnterConfirmPassword)
+            {
+                await App.Current.MainPage.DisplayAlert("Alert", "Password and Confirm Password must be same", "OK");
+                return;
+            }
             else
             {
-                var emailRegex = new Regex(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{1,}$");
-                if (!emailRegex.IsMatch(EnterEmail))
-                {
-                    await App.Current.MainPage.DisplayAlert("Alert", "Please enter valid Email", "OK");
-                    return;
-                }
-                else
-                {
-                    string pattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$";
-                    var passwordregex = new Regex(pattern);
-                    if (!passwordregex.IsMatch(EnterPassword))
-                    {
-                        await App.Current.MainPage.DisplayAlert("Alert", "Password must contain at least 8 characters, one uppercase, one lowercase, one number and one special character", "OK");
-                        return;
-                    }
-                    else
-                    {
-                        if (EnterPassword != EnterConfirmPassword)
-                        {
-                            await App.Current.MainPage.DisplayAlert("Alert", "Password and Confirm Password must be same", "OK");
-                            return;
-                        }
-                        else
-                        {
-                            
-                            try
-                            {
-                                //asign values to model and pass to next page
-                                await Mopups.Services.MopupService.Instance.PushAsync(new SignUpOTPPage());
-                            }
-                            catch (Exception ex)
-                            {
-                                await App.Current.MainPage.DisplayAlert("Alert", ex.Message, "OK");
-                            }
 
-                        }
-                    }
+                try
+                {
+                    //asign values to model and pass to next page
+                    await Mopups.Services.MopupService.Instance.PushAsync(new SignUpOTPPage());
                 }
+                catch (Exception ex)
+                {
+                    await App.Current.MainPage.DisplayAlert("Alert", ex.Message, "OK");
+                }
+
             }
-           
+
         }
         [RelayCommand]
         private void LoginClicked()
