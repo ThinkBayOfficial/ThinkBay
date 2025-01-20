@@ -1,4 +1,6 @@
 using Mopups.Services;
+using System.Net.Mail;
+using System.Net;
 
 namespace ThinkBay.Popupu.View;
 
@@ -9,8 +11,29 @@ public partial class SignUpOTPPage
     public SignUpOTPPage()
 	{
 		InitializeComponent();
+
         StartCountdownTimer();
-       
+        #region OTP mail sending 
+
+        //string from = "rahulsabu27sep@gmail.com";
+        //string pass = "rjjdpguackhljccb";
+        //string to = "sidharths31434@gmail.com";
+        //MailMessage message = new MailMessage();
+        //message.From = new MailAddress(from);
+        //message.Subject = "Test";
+        //message.To.Add(new MailAddress(to));
+        //message.Body = "Test";
+        //message.IsBodyHtml = false;
+        //var smt = new SmtpClient("smtp.gmail.com")
+        //{
+        //    Port = 587,
+        //    Credentials = new NetworkCredential(from, pass)
+        //      ,
+        //    EnableSsl = true,
+        //};
+        //smt.Send(message);
+        #endregion
+
     }
     private void LoginButton_Clicked(object sender, EventArgs e)
     {
