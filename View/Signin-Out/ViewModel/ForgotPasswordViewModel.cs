@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ThinkBay.View.Signin_Out.ViewModel
+namespace ThinkOwn.View.Signin_Out.ViewModel
 {
     public partial class ForgotPasswordViewModel : ObservableObject
     {

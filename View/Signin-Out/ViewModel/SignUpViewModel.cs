@@ -6,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using ThinkBay.Popupu.View;
-using ThinkBay.View.Signin_Out.View;
+using ThinkOwn.Popupu.View;
+using ThinkOwn.View.Signin_Out.View;
 using UraniumUI.Converters;
 
-namespace ThinkBay.View.Signin_Out.ViewModel
+namespace ThinkOwn.View.Signin_Out.ViewModel
 {
     public partial class SignUpViewModel : ObservableObject
     {

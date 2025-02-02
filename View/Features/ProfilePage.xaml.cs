@@ -1,4 +1,4 @@
-namespace ThinkBay.View.Features;
+namespace ThinkOwn.View.Features;
 
 public partial class ProfilePage : ContentPage
 {

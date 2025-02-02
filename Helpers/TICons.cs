@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ThinkBay.Helpers
+namespace ThinkOwn.Helpers
 {
     public  class TICons
     {
@@ -12,5 +12,6 @@ namespace ThinkBay.Helpers
         public string Profile  { get; set; } = "\uf007";
         public string EyeOppen { get; set; } = "\uf06e";
         public string EyeClosed { get; set; } = "\uf070";
+        public string Info { get; set; } = "\uf06a";
     }
 }

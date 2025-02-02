@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace ThinkBay
+namespace ThinkOwn
 {
     public class Program
     {

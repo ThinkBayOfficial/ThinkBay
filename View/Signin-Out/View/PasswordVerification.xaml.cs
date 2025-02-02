@@ -1,6 +1,6 @@
-using ThinkBay.View.Signin_Out.ViewModel;
+using ThinkOwn.View.Signin_Out.ViewModel;
 
-namespace ThinkBay.View.Signin_Out;
+namespace ThinkOwn.View.Signin_Out;
 
 public partial class PasswordVerification : ContentPage
 {

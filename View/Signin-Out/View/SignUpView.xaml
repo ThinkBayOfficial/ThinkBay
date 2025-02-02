@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ThinkBay.View.Signin_Out.View.SignUpView"
-             xmlns:behave="clr-namespace:ThinkBay.Behaviours"
-             xmlns:local="clr-namespace:ThinkBay" BackgroundColor="#121212"
-                xmlns:vm="clr-namespace:ThinkBay.View.Signin_Out.ViewModel"
+             x:Class="ThinkOwn.View.Signin_Out.View.SignUpView"
+             xmlns:behave="clr-namespace:ThinkOwn.Behaviours"
+             xmlns:local="clr-namespace:ThinkOwn" BackgroundColor="#121212"
+                xmlns:vm="clr-namespace:ThinkOwn.View.Signin_Out.ViewModel"
              xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
              Title="SignUpView">
     <Grid Margin="0,30,0,0"  RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto" Background="#121212">
@@ -13,13 +13,15 @@
         <Label   Margin="20,0,20,20" Grid.Row="2" HorizontalOptions="End" Grid.RowSpan="2" TextColor="#ffde22" FontSize="32" Text="{Binding Shopping, Source={Static local:App.TICon}}" FontFamily="FontAwesome"/>
         <Border  Margin="20,33,20,20"  Grid.Row="3" HeightRequest="1" Stroke="#FFFFFF" />
         <uranium:TextField Grid.Row="4" Margin="20,20,20,20" BorderColor="DimGrey" Text="{Binding FullName}"  BackgroundColor="#121212" Title="Full Name" TitleColor="#FFFFFF" TextColor="#FFFFFF" />
-        <uranium:TextField Grid.Row="5" x:Name="EmailEntry" Margin="20,10,20,20" Text="{Binding EnterEmail}" BorderColor="DimGrey" BackgroundColor="#121212" Title="Email" TitleColor="#FFFFFF" TextColor="#FFFFFF" >
+        <Label Text="{Binding Info, Source={Static local:App.TICon}}" FontFamily="FontAwesome" Margin="20,0,30,0" TextColor="Red" Grid.Row="5" FontSize="13" HorizontalOptions="End" VerticalOptions="Start"/>
+
+        <uranium:TextField Grid.Row="5" x:Name="EmailEntry" Margin="20,15,20,20" Text="{Binding EnterEmail}" BorderColor="DimGrey" BackgroundColor="#121212" Title="Email" TitleColor="#FFFFFF" TextColor="#FFFFFF" >
             <uranium:TextField.Behaviors>
                 <behave:EmailValidationBehavior/>
             </uranium:TextField.Behaviors>
         </uranium:TextField>
-
-        <uranium:TextField Grid.Row="6"   Text="{Binding EnterPassword}" x:Name="Passwords" IsPassword="{Binding Ispassword}" Margin="20,10,20,20" BorderColor="DimGrey" BackgroundColor="#121212" Title="Password" TitleColor="#FFFFFF" TextColor="#FFFFFF" >
+        <Label Text="{Binding Info, Source={Static local:App.TICon}}" FontFamily="FontAwesome" Margin="20,0,30,0" TextColor="Red" Grid.Row="6" FontSize="13" HorizontalOptions="End" VerticalOptions="Start"/>
+        <uranium:TextField Grid.Row="6"   Text="{Binding EnterPassword}" x:Name="Passwords" IsPassword="{Binding Ispassword}" Margin="20,15,20,20" BorderColor="DimGrey" BackgroundColor="#121212" Title="Password" TitleColor="#FFFFFF" TextColor="#FFFFFF" >
             <uranium:TextField.Behaviors>
                 <behave:PasswordValidation></behave:PasswordValidation>
             </uranium:TextField.Behaviors>
@@ -34,7 +36,9 @@
             <TapGestureRecognizer Command="{Binding MangePasswordVisibilityCommand}"/>
         </Label.GestureRecognizers>
         </Label>
-        <uranium:TextField Grid.Row="7" Text="{Binding EnterConfirmPassword}" x:Name="Confirm" TextChanged="Confirm_TextChanged" IsPassword="{Binding Isconpassword}" Margin="20,10,20,20" BorderColor="DimGrey" BackgroundColor="#121212" Title=" Confirm Password" TitleColor="#FFFFFF" TextColor="#FFFFFF" >
+        <Label Text="{Binding Info, Source={Static local:App.TICon}}" FontFamily="FontAwesome" Margin="20,0,30,0" TextColor="Red" Grid.Row="7" FontSize="13" HorizontalOptions="End" VerticalOptions="Start"/>
+
+        <uranium:TextField Grid.Row="7" Text="{Binding EnterConfirmPassword}" x:Name="Confirm" TextChanged="Confirm_TextChanged" IsPassword="{Binding Isconpassword}" Margin="20,15,20,20" BorderColor="DimGrey" BackgroundColor="#121212" Title=" Confirm Password" TitleColor="#FFFFFF" TextColor="#FFFFFF" >
         </uranium:TextField>
         <Label    HorizontalOptions="End" VerticalOptions="Center" Grid.Row="7" Margin="5,5,30,5" IsVisible="{Binding Isconpasswordshowiconoppen}"  TextColor="White" FontSize="16" Text="{Binding EyeOppen, Source={Static local:App.TICon}}" FontFamily="FontAwesome">
             <Label.GestureRecognizers>

@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ThinkBay.View.Signin_Out.View;
+using ThinkOwn.View.Signin_Out.View;
 
-namespace ThinkBay.View.Signin_Out.ViewModel
+namespace ThinkOwn.View.Signin_Out.ViewModel
 {
     public partial class SigninViewModel :ObservableObject
     {

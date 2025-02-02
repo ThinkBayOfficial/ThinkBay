@@ -3,11 +3,11 @@ using Microsoft.Extensions.Logging;
 using Mopups.Hosting;
 using Mopups.Interfaces;
 using Mopups.Services;
-using ThinkBay.Helpers;
-using ThinkBay.View.Signin_Out;
+using ThinkOwn.Helpers;
+using ThinkOwn.View.Signin_Out;
 using UraniumUI;
 
-namespace ThinkBay
+namespace ThinkOwn
 {
     public static class MauiProgram
     {

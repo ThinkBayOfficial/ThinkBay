@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace ThinkBay
+namespace ThinkOwn
 {
     [Application]
     public class MainApplication : MauiApplication

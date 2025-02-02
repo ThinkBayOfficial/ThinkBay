@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace ThinkBay.Behaviours
+namespace ThinkOwn.Behaviours
 {
     public class PasswordValidation : Behavior<UraniumUI.Material.Controls.TextField>
     {

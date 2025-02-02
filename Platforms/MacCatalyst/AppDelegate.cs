@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace ThinkBay
+namespace ThinkOwn
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

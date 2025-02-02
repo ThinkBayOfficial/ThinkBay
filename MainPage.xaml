@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:ThinkBay"
-             x:Class="ThinkBay.MainPage">
+             xmlns:local="clr-namespace:ThinkOwn"
+             x:Class="ThinkOwn.MainPage">
 
     <ScrollView>
         <Label VerticalOptions="Center" Text="{Binding Message,Source={Static local:App.T_Message}}" FontFamily="FontAwesome" TextColor="Red"/>

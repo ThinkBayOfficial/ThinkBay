@@ -1,10 +1,10 @@
 using CommunityToolkit.Maui.Core.Primitives;
 using CommunityToolkit.Maui.Views;
 using Mopups.Services;
-using ThinkBay.View.Signin_Out.View;
+using ThinkOwn.View.Signin_Out.View;
 using UraniumUI.ViewExtensions;
 
-namespace ThinkBay.Popupu.View;
+namespace ThinkOwn.Popupu.View;
 
 public partial class SplashVideoPage : ContentPage
 {

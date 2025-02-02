@@ -1,6 +1,6 @@
-using ThinkBay.View.Signin_Out.ViewModel;
+using ThinkOwn.View.Signin_Out.ViewModel;
 
-namespace ThinkBay.View.Signin_Out.View;
+namespace ThinkOwn.View.Signin_Out.View;
 
 public partial class SigninView : ContentPage
 {

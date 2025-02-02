@@ -1,10 +1,10 @@
-﻿using ThinkBay.Helpers;
-using ThinkBay.View.Signin_Out;
-using ThinkBay.View.Features;
-using ThinkBay.View.Signin_Out.View;
-using ThinkBay.Popupu.View;
+﻿using ThinkOwn.Helpers;
+using ThinkOwn.View.Signin_Out;
+using ThinkOwn.View.Features;
+using ThinkOwn.View.Signin_Out.View;
+using ThinkOwn.Popupu.View;
 
-namespace ThinkBay
+namespace ThinkOwn
 {
     public partial class App : Application
     {
@@ -26,5 +26,6 @@ namespace ThinkBay
              // MainPage = new ForgotPasswordOTP();
 
         }
+        
     }
 }

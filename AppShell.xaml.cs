@@ -1,4 +1,4 @@
-﻿namespace ThinkBay
+﻿namespace ThinkOwn
 {
     public partial class AppShell : Shell
     {

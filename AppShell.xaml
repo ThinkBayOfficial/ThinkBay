@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-    x:Class="ThinkBay.AppShell"
+    x:Class="ThinkOwn.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:ThinkBay"
+    xmlns:local="clr-namespace:ThinkOwn"
     Shell.FlyoutBehavior="Flyout"
   
-    Title="ThinkBay">
+    Title="ThinkOwn">
 
     <!--<FlyoutItem Title="Home">
         --><!-- Navigate to Home Page --><!--
