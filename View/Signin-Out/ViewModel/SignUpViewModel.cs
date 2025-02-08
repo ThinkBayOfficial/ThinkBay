@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using ThinkOwn.Interfaces;
 using ThinkOwn.Popupu.View;
 using ThinkOwn.View.Signin_Out.View;
 using UraniumUI.Converters;
@@ -38,6 +39,21 @@ namespace ThinkOwn.View.Signin_Out.ViewModel
         private bool isconpasswordshowiconoppen = false;
         [ObservableProperty]
         private bool isconpasswordshowiconclossed = true;
+        [RelayCommand]
+        private async void EmailInfo()
+        {
+            
+        }
+        [RelayCommand]
+        private async void PasswordInfo()
+        {
+
+        }
+        [RelayCommand]
+        private async void ConfirmPasswordInfo()
+        {
+
+        }
 
 
         [RelayCommand]
