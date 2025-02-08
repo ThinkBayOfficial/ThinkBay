@@ -16,7 +16,7 @@ namespace ThinkOwn.Helpers
          
         
         public static FirebaseClient firebase = new FirebaseClient(App.T_Message.F_R_URL);
-        public static FirebaseStorage firebaseStorage = new FirebaseStorage(App.T_Message.);
+        public static FirebaseStorage firebaseStorage = new FirebaseStorage(App.T_Message.F_R_URL_Storage);
         #region LOGIN REGISTRATION TASK
 
         public static async Task<List<TUser>> GetAllUser()
