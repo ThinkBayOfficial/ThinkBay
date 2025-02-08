@@ -4,6 +4,8 @@ using Mopups.Hosting;
 using Mopups.Interfaces;
 using Mopups.Services;
 using ThinkOwn.Helpers;
+using ThinkOwn.InterFaces;
+using ThinkOwn.Platforms;
 using ThinkOwn.View.Signin_Out;
 using UraniumUI;
 
@@ -34,7 +36,7 @@ namespace ThinkOwn
             builder.Services.AddSingleton<TICons>();
 
             //dependency injection for page
-            
+            builder.Services.AddTransient<IShowToast,CustomToast>();
             
             
             builder.Services.AddSingleton<IPopupNavigation>(MopupService.Instance);

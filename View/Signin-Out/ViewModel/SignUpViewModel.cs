@@ -6,7 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using ThinkOwn.Interfaces;
+using ThinkOwn.InterFaces;
+
 using ThinkOwn.Popupu.View;
 using ThinkOwn.View.Signin_Out.View;
 using UraniumUI.Converters;
@@ -15,9 +16,10 @@ namespace ThinkOwn.View.Signin_Out.ViewModel
 {
     public partial class SignUpViewModel : ObservableObject
     {
-        public SignUpViewModel()
+        private IShowToast _showToast;
+        public SignUpViewModel(IShowToast showToast)
         {
-            
+            _showToast = showToast;
         }
         [ObservableProperty]
         private string fullName;
@@ -40,19 +42,31 @@ namespace ThinkOwn.View.Signin_Out.ViewModel
         [ObservableProperty]
         private bool isconpasswordshowiconclossed = true;
         [RelayCommand]
-        private async void EmailInfo()
+        private  void EmailInfo()
         {
-            
+
+            var toast = _showToast;
+
+            toast.ShowToast("Email is not valid,should be in the fallowing format 'abc@gmail.com' ");
+
+
+
+
         }
         [RelayCommand]
         private async void PasswordInfo()
         {
+            var toast = _showToast;
+
+            toast.ShowToast("Password must be at least 8 characters long, contain an uppercase letter, a number, and a special character");
 
         }
         [RelayCommand]
         private async void ConfirmPasswordInfo()
         {
+            var toast = _showToast;
 
+            toast.ShowToast("Password & ConfirmPassword Should be Same.");
         }
 
 
@@ -117,7 +131,7 @@ namespace ThinkOwn.View.Signin_Out.ViewModel
         [RelayCommand]
         private void LoginClicked()
         {
-            App.Current.MainPage = new SigninView();
+            App.Current.MainPage = new SigninView(_showToast);
         }
 
         [RelayCommand]

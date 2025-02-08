@@ -17,7 +17,18 @@
                 <behave:EmailValidationBehavior/>
             </uranium:TextField.Behaviors>
         </uranium:TextField>
+       
         <uranium:TextField Grid.Row="5" Text="{Binding PasswordEntry}" TextColor="#e0e0e0" IsPassword="{Binding Ispassword}"  Margin="20,10,20,20" BorderColor="DimGrey" BackgroundColor="#121212" Title="Password" TitleColor="#e0e0e0" />
+        <Label    HorizontalOptions="End" VerticalOptions="Center" Grid.Row="5" Margin="5,5,30,5" IsVisible="{Binding Ispasswordshowiconoppen}"  TextColor="White" FontSize="16" Text="{Binding EyeOppen, Source={Static local:App.TICon}}" FontFamily="FontAwesome">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding CheckVisibilityCommand}"/>
+            </Label.GestureRecognizers>
+        </Label>
+        <Label    HorizontalOptions="End" VerticalOptions="Center" Grid.Row="5" Margin="5,5,30,5" IsVisible="{Binding Ispasswordshowiconclossed}"  TextColor="White" FontSize="16" Text="{Binding EyeClosed, Source={Static local:App.TICon}}" FontFamily="FontAwesome">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding CheckVisibilityCommand}"/>
+            </Label.GestureRecognizers>
+        </Label>
         <Grid Margin="20,0,20,20 " ColumnDefinitions="*,*" Grid.Row="6">
             <uranium:CheckBox BoxBackgroundColor="#ffde22" BoxSizeRequest="20" Grid.Row="0" TextFontSize="15" TextColor="White" Grid.Column="0" Text="Remember me" />
             <Label Grid.Row="0" Grid.Column="1" TextColor="#ffde22" FontSize="15" VerticalOptions="Center" HorizontalOptions="End"   Text="{Binding ForGotPass, Source={Static local:App.T_Message}}" >
@@ -31,7 +42,7 @@
             <Label   Margin="65,0,0,20" Grid.Column="0" TextColor="White" FontSize="14"  Text="{Binding Create, Source={Static local:App.T_Message}}" />
             <Label   Margin="5,0,0,20" Grid.Column="1" TextColor="#ffde22"  FontSize="14"  Text="{Binding Create_One, Source={Static local:App.T_Message}}" >
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding CreateOneCommand,Source={vm:SigninViewModel}}"/>
+                    <TapGestureRecognizer Command="{Binding CreateOneCommand}"/>
                 </Label.GestureRecognizers>
             </Label>
 

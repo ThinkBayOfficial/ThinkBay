@@ -1,15 +1,20 @@
+
 using Microsoft.Maui.ApplicationModel.Communication;
 using System.Text.RegularExpressions;
+using ThinkOwn.InterFaces;
+
 using ThinkOwn.View.Signin_Out.ViewModel;
 
 namespace ThinkOwn.View.Signin_Out.View;
 
 public partial class SignUpView : ContentPage
 {
-	public SignUpView()
+    private IShowToast _showToast;
+    public SignUpView(IShowToast showToast)
 	{
 		InitializeComponent();
-        BindingContext = new SignUpViewModel();
+        _showToast = showToast;
+        BindingContext = new SignUpViewModel(_showToast);
         
     }
 
@@ -20,6 +25,7 @@ public partial class SignUpView : ContentPage
         if (emailRegex.IsMatch(email))
         {
             EmailInfo.IsVisible = false;
+          
         }
         else
         {
