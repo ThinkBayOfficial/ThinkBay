@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Maui;
+using Firebase.Database;
 using Microsoft.Extensions.Logging;
 using Mopups.Hosting;
 using Mopups.Interfaces;
@@ -42,7 +43,8 @@ namespace ThinkOwn
             builder.Services.AddSingleton<IPopupNavigation>(MopupService.Instance);
             //dependency injection for  model 
             //dependency injection for view model 
-
+            //backend 
+            builder.Services.AddSingleton(new FirebaseClient("https://myapp-2f387-default-rtdb.firebaseio.com"));
 
 #if DEBUG
             builder.Logging.AddDebug();

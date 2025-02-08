@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ThinkOwn.Helpers;
 using ThinkOwn.InterFaces;
 
 using ThinkOwn.View.Signin_Out.View;
@@ -32,8 +33,10 @@ namespace ThinkOwn.View.Signin_Out.ViewModel
         [RelayCommand]
         private async void SigninClicked()
         {
+            var testvalue = T_Preferences.LOGIN_DATA;
             var email = EmailEntry;
             var password = PasswordEntry;
+            
 
         }
         [RelayCommand]

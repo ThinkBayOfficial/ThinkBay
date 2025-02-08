@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using ThinkOwn.Helpers;
 using ThinkOwn.InterFaces;
 
 using ThinkOwn.Popupu.View;
@@ -118,7 +119,12 @@ namespace ThinkOwn.View.Signin_Out.ViewModel
                 try
                 {
                     //asign values to model and pass to next page
-                    await Mopups.Services.MopupService.Instance.PushAsync(new SignUpOTPPage());
+                    // await Mopups.Services.MopupService.Instance.PushAsync(new SignUpOTPPage());
+                    var user = await FireBaseHelper.AddUser(EnterEmail, EnterPassword);
+                    T_Preferences.LOGIN_DATA = EnterEmail;
+                    var toast = _showToast;
+
+                    toast.ShowToast("Done");
                 }
                 catch (Exception ex)
                 {

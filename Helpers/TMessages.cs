@@ -9,7 +9,9 @@ using static System.Net.Mime.MediaTypeNames;
 namespace ThinkOwn.Helpers
 {
     public  class TMessages 
-    {  
+    {
+        public string F_R_URL { get; set; } = "https://myapp-2f387-default-rtdb.firebaseio.com";
+        public string F_R_URL_Storage { get; set; } = "gs://myapp-2f387.appspot.com";
         public string LoginHeader { get; set; } = "Let’s sign you in ";
         public string LoginSub { get; set; } = "Welcome Back! We\r\nmissed you.";
         public string ForGotPass { get; set; } = "Forgot Password?";
